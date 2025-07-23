@@ -5,8 +5,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AddMovies } from '../utils/movieSlice';
 import Movies from '../utils/Movies';
 import MainContainer from './MainContainer';
+import SecondaryContainer from './SecondaryContainer';
+import GptSearch from './GptSearch';
 
 function Browse() {
+    const search=useSelector(state=>state.search.showGpt);
+    console.log(search);
+    
     Movies();
     useEffect(()=>{
        
@@ -18,7 +23,14 @@ function Browse() {
   return (
     <div>
         <Header></Header>
-        <MainContainer></MainContainer>
+        {
+            search ===true? <GptSearch></GptSearch>:<>
+             <MainContainer></MainContainer>
+         <SecondaryContainer></SecondaryContainer>
+            </>
+        }
+       
+       
         </div>
   )
 }
