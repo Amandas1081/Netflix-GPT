@@ -23,8 +23,8 @@ function SecondaryContainer() {
        <MovieList title="Now Playing" movies={movie}></MovieList>
        <MovieList title="Top Rated" movies={movie}></MovieList>
        
-         <MovieList title="UpComing" movies={popular}></MovieList>
-          <MovieList title="Popular" movies={upcoming}></MovieList>
+         <MovieList title="UpComing" movies={movie}></MovieList>
+          <MovieList title="Popular" movies={movie}></MovieList>
            
 
        
